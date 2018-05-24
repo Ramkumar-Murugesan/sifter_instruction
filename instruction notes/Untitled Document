@@ -1,0 +1,24 @@
+1.import desktop in sifter-master in java sts has GRADLE STS
+2.import real_analytics_batch_.1 in realestate_analytics-master has general ---> existing projects 
+3.technologies 
+  1.frontEnd --->> angularJs
+  2.backEnd  --->> java 5(springboot)
+
+IN real_analytics_batch_.1
+
+1.change FileSystemXmlApplicationContext("/testxml/spring_config.xml") in ReBatch.java files if it is in live
+else 
+change FileSystemXmlApplicationContext("spring_config.xml") in ReBatch.java files if it is in local
+
+2.if the data is not in our db(aws) set has true ,that is , test_service.setBootstrap(true);
+ or else if we want to update the existing data in awsDB means set has false ,thatIs, test_service.setBootstrap(false); 
+
+3.the idea is to get the data from RES(Real estate server) and insert it into our db(aws)
+
+set email in the user based on values alert and clear emailLogs ever 7 hours 
+
+
+IN DESKTOP in Realestate_Application_42
+
+1.change db.url to jdbc:mysql://localhost:3306/rets_test?useUnicode=true&characterEncoding=UTF-8 in the application.properties files
+2.change db.username and db.password to (mysql local username and password in my case (it is root and root)) in the application.properties files

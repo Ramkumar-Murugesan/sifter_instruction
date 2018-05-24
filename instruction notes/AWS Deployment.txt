@@ -1,0 +1,24 @@
+login into putty 
+To view docker container
+sudo docker ps -a
+
+To view docker images
+sudo docker images
+
+1. delete the previous docker 
+sudo docker rm -f batch || sudo docker rm -f sifter
+
+2.delete the previous image
+sudo docker images --- (testbatch or testapp)
+sudo docker rmi <imageid>
+
+3.make confirm that what we have deploy (app or batch) --> Go inside the directory and execute the command
+sudo docker build -t testbatch . || sudo docker build -t testapp .
+
+4.to run the docker
+sudo docker run --name batch --restart=always -d testbatch || sudo docker run --name sifter --restart=always -d -p 80:8080 testapp
+
+
+sudo docker exec -ti batch bin/bash
+
+tail -f var/log/jar.log
